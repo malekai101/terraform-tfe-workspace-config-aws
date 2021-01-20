@@ -11,6 +11,7 @@ resource "tfe_variable" "aws_session_token" {
   category     = "env"
   workspace_id = data.tfe_workspace.dev_workspace.id
   description  = "AWS Session Token"
+  sensitive    = true
 }
 
 resource "tfe_variable" "aws_access_key_id" {
